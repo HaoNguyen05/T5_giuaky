@@ -1,0 +1,232 @@
+.home-wrapper {
+  width: 100%;
+  padding-bottom: 50px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===================== BANNER ===================== */
+.banner {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #d8e9ff, #ffffff);
+  padding: 50px;
+  border-radius: 16px;
+  margin: 20px auto;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.banner-text {
+  width: 50%;
+}
+
+.banner-text h1 {
+  font-size: 42px;
+  color: #003b8e;
+  font-weight: bold;
+}
+
+.banner-text p {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #444;
+}
+
+.btn-banner {
+  padding: 12px 24px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-banner:hover {
+  background: #005ad3;
+}
+
+.banner-img {
+  width: 45%;
+  height: 330px;
+  background-image: url("https://i.imgur.com/Z1x2MYI.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  animation: slideIn 1s ease-in-out;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===================== SEARCH ===================== */
+.search-bar {
+  width: 95%;
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-bar button:hover {
+  background: #005ad3;
+}
+
+/* ===================== PRODUCT SECTION ===================== */
+.home-section {
+  width: 95%;
+  margin: 30px auto;
+}
+
+.home-section h2 {
+  font-size: 28px;
+  color: #0056b3;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-card {
+  width: 24%;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-card h4 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.price {
+  margin-top: 8px;
+  color: #e60000;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* ===================== SLIDER ===================== */
+.slider-container {
+  width: 100%;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-text {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 420px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.slide-text h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.slide-text p {
+  margin: 10px 0 20px;
+  font-size: 18px;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
